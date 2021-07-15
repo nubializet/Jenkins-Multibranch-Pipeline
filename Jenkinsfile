@@ -12,13 +12,14 @@ pipeline {
 							echo "${EXECUTE}"
 							}	
 				     }
-						
 		
-
 			stage('Two') {
-				steps{
-					echo "${EXECUTE}"
-				}
+						when {
+							environment name: 'EXECUTE', value: "True"
+						     }
+						steps{
+							echo "${EXECUTE}"
+						     }
 						
 						
 				      }		 
