@@ -7,7 +7,7 @@ pipeline {
 						steps {
 							sh ' echo "Step One" '
 							script {
-								env.EXECUTE = "True"
+								EXECUTE = "True"
 								}
 							echo "${EXECUTE}"
 							}	
