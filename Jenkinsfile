@@ -17,7 +17,7 @@ pipeline {
 
 			stage('Two') {
 						when {
-							EXECUTE 'True'
+							EXECUTE == "True"
 							sh ' echo "Step Two" '
 							
 						     }
