@@ -5,7 +5,7 @@ pipeline {
 						steps {
 							sh ' echo "Step One" '
 							script {
-								env.VARIABLE="value"
+								env.EXECUTE="True"
 								}
 							}
 						}
@@ -13,9 +13,7 @@ pipeline {
 			stage('Two') { 
 						steps { 
 							sh ' echo "Step Two" '
-							script {
-								echo ${VARIABLE}
-								}
+							sh ' echo "Updating Second Stage" '
 						      }
 						}		 
 
