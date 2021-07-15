@@ -8,8 +8,8 @@ pipeline {
 							sh ' echo "Step One" '
 							script {
 								env.EXECUTE = "True"
-								
 								}
+							echo "${VARIABLE}"
 							}	
 				     }
 						
@@ -19,9 +19,8 @@ pipeline {
 						steps { 
 							sh ' echo "Step Two" '
 							sh ' echo "Updating Second Stage" '
-							script {
-								echo ${VARIABLE}
-								}
+							
+								
 						      }
 				      }		 
 
