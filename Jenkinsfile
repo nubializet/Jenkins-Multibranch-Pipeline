@@ -17,7 +17,7 @@ pipeline {
 
 			stage('Two') {
 						when {
-							environment { EXECUTE == "True" }							
+							environment name: 'EXECUTE', value: "True"							
 						     }
 						steps { 
 							sh ' echo "Step Two" '
