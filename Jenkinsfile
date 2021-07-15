@@ -1,21 +1,17 @@
 pipeline {
 	agent any
+	environment { EXECUTE = "default"
+	}
 	stages { 
 			stage('One') { 
 						steps {
 							sh ' echo "Step One" '
 							script {
-								env.EXECUTE="True"
+								 env.EXECUTE = "True"
 								}
-							}
-						when {
-                					environment name: 'EXECUTE', value: "True"
-           						}
-						steps{
-							sh ' echo "variable" '
-						}
-							
-						}
+							echo env.EXECUTE
+							}	
+				     }
 						
 		
 
@@ -24,12 +20,12 @@ pipeline {
 							sh ' echo "Step Two" '
 							sh ' echo "Updating Second Stage" '
 						      }
-						}		 
+				      }		 
 
 			stage('Three') {
 						steps {
 							sh ' echo "Step Three" '
 							}
-						}
+				       }
 			}
 }
