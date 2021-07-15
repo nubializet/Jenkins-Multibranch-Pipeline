@@ -9,7 +9,7 @@ pipeline {
 							script {
 								env.EXECUTE = "True"
 								}
-							echo "${VARIABLE}"
+							echo "${EXECUTE}"
 							}	
 				     }
 						
