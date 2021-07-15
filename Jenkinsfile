@@ -17,12 +17,11 @@ pipeline {
 
 			stage('Two') {
 						when {
-							environment name: 'EXECUTE', value: "True"
-						     }
-						steps { 
+							EXECUTE 'True'
 							sh ' echo "Step Two" '
-							sh ' echo "Updating Second Stage" '	
-						      }
+							
+						     }
+						
 				      }		 
 
 			stage('Three') {
