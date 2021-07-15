@@ -4,12 +4,14 @@ pipeline {
 			stage('One') { 
 						steps {
 							sh ' echo "Step One" '
+							env.EXECUTE="True"
 							}
 						}
 
 			stage('Two') { 
 						steps { 
 							sh ' echo "Step Two" '
+							echo ${VARIABLE}
 						    }
 						}		 
 
