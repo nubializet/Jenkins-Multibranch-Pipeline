@@ -8,7 +8,16 @@ pipeline {
 								env.EXECUTE="True"
 								}
 							}
+						when {
+                					environment name: 'EXECUTE', value: "True"
+           						}
+						steps{
+							sh ' echo "variable" '
 						}
+							
+						}
+						
+		
 
 			stage('Two') { 
 						steps { 
