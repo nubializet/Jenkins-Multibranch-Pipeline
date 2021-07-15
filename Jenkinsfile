@@ -16,8 +16,9 @@ pipeline {
 		
 
 			stage('Two') {
-				
-				echo "${EXECUTE}"
+				steps{
+					echo "${EXECUTE}"
+				}
 						
 						
 				      }		 
